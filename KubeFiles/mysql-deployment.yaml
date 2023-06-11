@@ -23,6 +23,8 @@ spec:
                 secretKeyRef:
                   name: mysql-secret
                   key: root-password
+            - name: MYSQL_DATABASE
+              value: todosdb
           volumeMounts:
             - name: mysql-persistent-storage
               mountPath: /var/lib/mysql
